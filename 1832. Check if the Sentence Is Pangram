@@ -1,0 +1,15 @@
+class Solution {
+    public boolean checkIfPangram(String sentence) {
+
+        int count = 0;
+        for (int asciiValue = (int) 'a'; asciiValue <= (int) 'z'; asciiValue++){
+            if(sentence.contains(String.valueOf((char) asciiValue))){
+                count++;
+            }
+        }
+        if(count==26){
+           return true;
+        }
+        return false;
+    }
+}
